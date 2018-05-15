@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private MyDatabaseHelper dbHelper;
+    private MyDatabaseHelper dbHelper;//数据库
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
