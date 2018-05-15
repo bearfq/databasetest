@@ -1,4 +1,4 @@
-package com.example.cvte.databasetest;
+package com.example.cvte.databasetest;//包名
 
 import android.content.ContentValues;
 import android.database.Cursor;
