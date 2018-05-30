@@ -63,10 +63,10 @@ public class DatabaseProvider extends ContentProvider {
         // 添加数据
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         Uri uriReturn = null;
-        switch (uriMatcher.match(uri)) {
+        switch (uriMatcher.match(uri)) {//解析uri
             case BOOK_DIR:
             case BOOK_ITEM:
-                long newBookId = db.insert("Book", null, values);
+                long newBookId = db.insert("Book", null, values);//执行操作
                 uriReturn = Uri.parse("content://" + AUTHORITY + "/book/" + newBookId);
                 break;
             case CATEGORY_DIR:

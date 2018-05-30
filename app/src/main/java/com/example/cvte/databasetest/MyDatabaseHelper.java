@@ -12,12 +12,12 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             + "author text, "
             + "price real, "
             + "pages integer, "
-            + "name text)";
+            + "name text)";//创建BOOK表语句
 
     public static final String CREATE_CATEGORY = "create table Category ("
             + "id integer primary key autoincrement, "
             + "category_name text, "
-            + "category_code integer)";
+            + "category_code integer)";//创建CATEGORY表语句
 
     private Context mContext;
 
@@ -31,7 +31,6 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_BOOK);
         db.execSQL(CREATE_CATEGORY);
-//        Toast.makeText(mContext, "Create successed", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -40,5 +39,4 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists Category");
         onCreate(db);
     }
-
 }
